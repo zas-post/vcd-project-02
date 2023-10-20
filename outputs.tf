@@ -18,3 +18,8 @@ output "status" {
 output "href" {
   value = resource.vcd_vapp.tf_vapp.href
 }
+
+output "ubuntu_password" {
+  value = nonsensitive(resource.vcd_vapp_vm.ubuntu.customization[0].admin_password)
+  #sensitive = true
+}
