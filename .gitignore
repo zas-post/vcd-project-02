@@ -1,0 +1,7 @@
+/distrib/*
+
+*.tfvars
+*.tfstate
+*.tfstate.backup
+*.lock.hcl
+.terraform
