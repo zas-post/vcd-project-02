@@ -20,14 +20,14 @@ variable "vcd_org" {
   description = "vCD Tenant Org"
 }
 
-variable "vcd_url" {
-  default     = "def_url_vdc"
-  description = "vCD Tenant URL"
-}
-
 variable "vcd_vdc" {
   default     = "def_org_vdc"
   description = "vCD Tenant VDC"
+}
+
+variable "vcd_url" {
+  default     = "def_url_vdc"
+  description = "vCD Tenant URL"
 }
 
 variable "vcd_max_retry_timeout" {
@@ -39,6 +39,20 @@ variable "vcd_allow_unverified_ssl" {
   description = "vCD allow unverified SSL"
   default     = "true"
 }
+
+
+# ------------------------------------------------
+# Create vAPP
+# ------------------------------------------------
+
+variable "vapp_name" {
+  description = "vCD vAPP Name"
+}
+
+variable "vapp_description" {
+  description = "vCD vAPP Description"
+}
+
 
 variable "vcd_edge_name" {
   description = "vCD edge name"
@@ -53,6 +67,14 @@ variable "template_vm" {
   description = "template vm"
 }
 
+variable "ova_path" {
+  description = "ova_path"
+}
+
+variable "os_type_ubuntu_x64" {
+  description = "os_type_ubuntu_x64"
+}
+
 variable "vapp_ip_netw" {
   description = "vCD vAPP Netw"
   #default = "def_vapp_ip_netw"
@@ -63,7 +85,6 @@ variable "vapp_ip_gw" {
   #default = "vapp_ip_gw"
 }
 
-variable "vapp_ip_mask" {
+variable "vapp_ip_prefix_24" {
   description = "vCD vAPP Mask Prefix Length"
-  default = "24"
 }
